@@ -1,27 +1,45 @@
 body {
-    margin-left:20px;
+    margin: 0;
     padding: 0;
-    background: url('/assets/backgroundphoto.png');
+    background: url('assets/backgroundphoto.png') no-repeat center center fixed;
     background-size: cover;
 }
 
 /* NAVBAR */
 .navbar {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    padding: 15px 30px;
     position: fixed;
     top: 0;
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
+}
+
+.navbar a {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 30px;
+    /* Just made your nav links clickable :) */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .home-link {
     margin-left: 100px;
-    font-size: 37px;
+    font-size: 20px;
     font-weight: bold;
     color: #8a3032;
     text-decoration: none;
@@ -35,8 +53,7 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px;
-    margin-right: 50px;
+    gap: 1rem;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -54,7 +71,7 @@ body {
 
 .nav-links a:hover {
     color: #97333c;
-    
+
 }
 
 
@@ -63,10 +80,10 @@ body {
 
 .main-content {
     display: flex;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     align-items: center;
-    height: auto; 
-    padding-top: 150px; 
+    height: auto;
+    margin-top: 11rem;
     box-sizing: border-box;
 }
 
@@ -80,7 +97,7 @@ body {
 .main-heading {
     font-size: 50px;
     font-weight: bold;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     color: #29292B;
 }
 
@@ -110,7 +127,7 @@ body {
 .social-icon {
     width: 75px;
     height: 75px;
-    color: #741a1b;   
+    color: #741a1b;
     font-size: 30px;
 }
 
@@ -130,26 +147,28 @@ body {
 }
 
 .profile-container {
-    width: 100%;  
-    max-width: 400px;  
-    height: 600px; 
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
 }
 
 .profile-image {
-    width: 100%;  
-    height: auto; 
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
 .divider {
     width: 100%;
     height: 1px;
-    background-color: #8a3032; /* Red color */
+    background-color: #8a3032;
+    /* Red color */
     opacity: 35%;
-    margin: 0; /* Adjust margin as needed */
+    margin: 0;
+    /* Adjust margin as needed */
 }
 
 
@@ -171,17 +190,17 @@ body {
 
 .education-container {
     display: flex;
-    gap: 40px; 
+    gap: 40px;
     position: relative;
 }
 
 .dates-column {
-    width: 8%; 
+    width: 8%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    gap: 70px; 
-    padding-top: 60px; 
+    align-items: flex-start;
+    gap: 70px;
+    padding-top: 60px;
 }
 
 .timeline-date {
@@ -192,14 +211,14 @@ body {
 }
 
 .timeline-column {
-    width: 1.5px; 
-    background-color: #29292b; 
+    width: 1.5px;
+    background-color: #29292b;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 65px; 
-    padding-top: 45px; 
+    gap: 65px;
+    padding-top: 45px;
 }
 
 .timeline-dot {
@@ -217,7 +236,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 45px;
-    padding-top: 60px; 
+    padding-top: 60px;
 }
 
 .education-item h3 {
@@ -225,7 +244,7 @@ body {
     font-weight: bold;
     color: #29292B;
     margin: 0;
-    
+
 }
 
 .education-item p {
@@ -237,7 +256,7 @@ body {
 }
 
 .image-column {
-    width: 40%; 
+    width: 40%;
     height: auto;
     display: flex;
     align-items: center;
@@ -389,22 +408,23 @@ body {
 }
 
 .gobilink {
-    color: #8a3032;/* Smooth color transition on hover */
+    color: #8a3032;
+    /* Smooth color transition on hover */
 }
 
 .custom-link:hover {
-    color: #29292B; 
+    color: #29292B;
     text-decoration: none;
 }
 
 /*PROJECTS AND WORKS SECTION */
 .project-section {
-    padding: 50px 20px 30px 10%;
+    padding: 5rem;
     justify-content: center;
 }
 
 .project-title {
-    font-size: 50px ;
+    font-size: 50px;
     color: #8a3032;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
@@ -426,7 +446,12 @@ body {
 
 .projects-container {
     display: flex;
-    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* If you dont like the flex view and return your scrollable view simply remove this wrap line :) */
+    gap: 20px;
     overflow-x: auto;
     padding-bottom: 60px;
 }
@@ -434,7 +459,7 @@ body {
 .project-card {
     width: 230px;
     height: 320px;
-    background-color:#ffffff1e;
+    background-color: #ffffff1e;
     border-radius: 15px;
     border: 0.8px solid #8a3032;
     padding: 15px;
@@ -468,7 +493,7 @@ body {
     font-size: 15px;
     font-weight: bold;
     font-family: 'Montserrat', serif;
-    color:#29292B;
+    color: #29292B;
     margin: 10px 0 5px;
 }
 
@@ -476,7 +501,7 @@ body {
     font-size: 13px;
     font-weight: normal;
     font-family: 'Montserrat', serif;
-    color:#8a3032;
+    color: #8a3032;
     margin-bottom: 5px;
 }
 
@@ -530,6 +555,14 @@ body {
 
 .skill-icon:hover {
     color: #29292B;
+    transform: scale(1.1);
+    cursor: grab;
+}
+
+.skill-icon:active {
+    color: #8a3032;
+    transform: scale(0.9);
+    cursor: grabbing;
 }
 
 .skill-img {
@@ -564,36 +597,36 @@ html {
 /*Tabs Horizontal*/
 @media screen and (max-width: 1366px) {
     body {
-        margin-left:20px 50px;
+        margin-left: 20px 50px;
         padding: 0;
         background: url('assets/background.png') no-repeat center center fixed;
         background-size: cover;
     }
-    
+
     /* NAVBAR */
     .navbar {
         padding: 30px 20px;
     }
-    
+
     .home-link {
         margin-left: 60px;
     }
-    
-    
-    /*MAIN LANDING*/  
+
+
+    /*MAIN LANDING*/
     .main-content {
-        padding-top: 130px; 
+        padding-top: 130px;
     }
 
     /*MAIN--LEFT*/
     .left-part {
         padding: 0 0 0px 80px
     }
-    
+
     .main-heading {
         font-size: 45px;
     }
-    
+
     .sub-heading {
         font-size: 25px;
     }
@@ -632,7 +665,7 @@ html {
     .education-item h3 {
         font-size: 18px;
     }
-    
+
     .education-item p {
         font-size: 14px;
     }
@@ -648,19 +681,17 @@ html {
     .exp-tab-content {
         margin-left: 20px;
     }
-    
+
     .exp-dates-column {
         width: 20%;
     }
 
-    .project-section {
-        padding: 80px 20px 30px 10%;
-    }
+
     .project-title {
         font-size: 45px;
 
     }
-    
+
     .sub-header {
         text-align: center;
         margin-left: 0;
@@ -673,11 +704,11 @@ html {
 
 /*Tabs Vertical*/
 @media screen and (max-width: 820px) {
-    
-    
-    /*MAIN LANDING*/  
+
+
+    /*MAIN LANDING*/
     .main-content {
-        padding-top: 0px; 
+        padding-top: 0px;
         height: 90vh;
     }
 
@@ -686,11 +717,11 @@ html {
         padding: 0 0 0px 80px;
         width: 50%;
     }
-    
+
     .main-heading {
         font-size: 42px;
     }
-    
+
     .sub-heading {
         font-size: 20px;
     }
@@ -731,7 +762,7 @@ html {
     .education-item h3 {
         font-size: 18px;
     }
-    
+
     .education-item p {
         font-size: 14px;
     }
@@ -747,19 +778,17 @@ html {
     .exp-tab-content {
         margin-left: 20px;
     }
-    
+
     .exp-dates-column {
         width: 20%;
     }
 
-    .project-section {
-        padding: 80px 20px 30px 10%;
-    }
+
     .project-title {
         font-size: 45px;
 
     }
-    
+
     .sub-header {
         text-align: center;
         margin-left: 0;
@@ -780,16 +809,20 @@ html {
 
     .navbar {
         padding: 20px 20px;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
-        backdrop-filter: blur(10px); /* Apply the blur effect */
-        background: rgba(255, 255, 255, 0.3); /* Slightly transparent background to make blur visible */
+        backdrop-filter: blur(10px);
+        /* Apply the blur effect */
+        background: rgba(255, 255, 255, 0.3);
+        /* Slightly transparent background to make blur visible */
         transition: top 0.3s ease;
-        z-index: 1000; /* Ensure the navbar stays on top of other elements */
+        z-index: 1000;
+        /* Ensure the navbar stays on top of other elements */
         flex-direction: column;
         margin-left: 0;
         width: 100%;
-        position: fixed; /* Make navbar fixed at the top */
+        position: fixed;
+        /* Make navbar fixed at the top */
         top: 0;
         left: 0;
 
@@ -805,7 +838,7 @@ html {
         margin-left: 0;
     }
 
-    
+
     .main-content {
         flex-direction: column;
         padding-top: 140px;
@@ -859,14 +892,14 @@ html {
         border-radius: 50%;
         overflow: hidden;
         margin: 0 auto;
-        order: -1; 
-        background-image: url('assets/mobileme.png'); 
+        order: -1;
+        background-image: url('assets/mobileme.png');
         background-size: cover;
         background-position: center;
     }
 
     .profile-image {
-        display: none; 
+        display: none;
     }
 
     .social-links {
@@ -881,7 +914,7 @@ html {
         font-size: 25px;
     }
 
-    
+
     .education-section {
         padding: 25px 0px;
         align-items: center;
@@ -897,10 +930,9 @@ html {
 
     .education-container {
         gap: 40px
-
     }
 
-    .dates-column{
+    .dates-column {
         width: 20%;
         gap: 75px;
         margin-left: 20px;
@@ -921,14 +953,15 @@ html {
     .education-item h3 {
         font-size: 14px;
     }
-    
+
     .education-item p {
         font-size: 11px;
     }
-    
+
     .image-column {
-        width:0;
+        width: 0;
     }
+
     .education-image {
         display: none;
     }
@@ -946,7 +979,7 @@ html {
     }
 
     .experience-tabs {
-        gap:20px;
+        gap: 20px;
     }
 
     .exp-tab-button {
@@ -957,10 +990,11 @@ html {
         margin-left: 20px;
     }
 
-    
+
     .exp-dates-column {
         width: 30%;
     }
+
     .exp-date {
         font-size: 17px;
     }
@@ -986,27 +1020,18 @@ html {
         font-size: 12px;
     }
 
-    
-    .project-section {
-        padding: 25px 0;
-    }
+
     .project-title {
         font-size: 30px;
         color: #c9c7be;
         justify-content: center;
 
     }
-    
+
     .sub-header {
         text-align: center;
         margin-left: 0;
         font-size: 20px;
-    }
-
-    .projects-container{
-        margin-bottom: 10x;
-        gap: 20px;
-        padding-bottom: 0;
     }
 
     .others-section {
