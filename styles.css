@@ -1,5 +1,5 @@
 body {
-    margin-left:20px;
+    margin-left:0px;
     padding: 0;
     background: url('/assets/backgroundphoto.png');
     background-attachment: fixed;
@@ -15,8 +15,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 60px;
     box-sizing: border-box;
     z-index: 1000;
+    background-color: rgba(248, 248, 248, 0.163);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -63,11 +67,12 @@ body {
 /*MAIN LANDING*/
 
 .main-content {
+    margin-left: 40px;
     display: flex;
     justify-content: flex-start; 
     align-items: center;
     height: auto; 
-    padding-top: 150px; 
+    padding-top: 100px; 
     box-sizing: border-box;
 }
 
@@ -400,7 +405,7 @@ body {
 
 /*PROJECTS AND WORKS SECTION */
 .project-section {
-    padding: 50px 20px 30px 10%;
+    padding: 50px 20px 30px 10px;
     justify-content: center;
 }
 
