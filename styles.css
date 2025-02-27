@@ -2,6 +2,7 @@ body {
     margin-left:20px;
     padding: 0;
     background: url('/assets/backgroundphoto.png');
+    background-attachment: fixed;
     background-size: cover;
 }
 
