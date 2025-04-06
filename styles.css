@@ -1,7 +1,8 @@
 body {
-    margin-left:0px;
+    margin:0;
     padding: 0;
     background: url('/assets/backgroundphoto.png');
+    background-color: #29292B;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -21,7 +22,6 @@ body {
     background-color: rgba(248, 248, 248, 0.163);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
 .home-link {
@@ -67,7 +67,7 @@ body {
 /*MAIN LANDING*/
 
 .main-content {
-    margin-left: 40px;
+    margin: 0 40px;
     display: flex;
     justify-content: flex-start; 
     align-items: center;
